@@ -28,7 +28,7 @@ switch(THIS_PAGE){
     case 'chapters.php': 
         $title = 'chapters'; 
         $mainHeadline = ''; 
-        $center = ''; 
+        $center = 'chapters'; 
         $body = 'chapters'; 
     break; 
     case 'uploads.php': 

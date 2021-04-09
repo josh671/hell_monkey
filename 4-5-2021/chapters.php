@@ -5,7 +5,8 @@
 <div id="wrapper">
 <h1>Here are a list of my Comics</h1> 
 
-   
+   <!-- START OF TABLE DIV -->
+   <div id="chap_table">
         <?php //start php 
               //connection to database
                 $sql = 'SELECT * FROM Chapters'; 
@@ -16,28 +17,28 @@
                 
                       echo '<table id="chapters_table">'; 
                                 echo '<tr>';
-                                echo '<th>Chapter Names and Numbers</th>'; 
-                                echo '<th>Date Added</th>'; 
+                                echo '<th class="th_one">Chapter Names and Numbers</th>'; 
+                                echo '<th >Date Added</th>'; 
                                 echo '</tr>';
                       //start of while loop 
                       while ($row = mysqli_fetch_assoc($result) ){ 
                                 if($row['chapID'] == 0){ 
                                       if($row['Description'] != NULL){
-                                                        echo '<tr">'; 
+                                                        echo '<tr>'; 
                                                         echo '<td class="link"><a href="chapter-view.php?id='.$row['chapID'].'" >'.$row['chapID'].' '.$row['Description'].' </a>';'</td>';
                                                         echo '</tr>';
                                         }
                                   }
                                 if($row['chapID'] == 1){ 
                                         if($row['Description'] != NULL){
-                                                          echo '<tr">'; 
+                                                          echo '<tr>'; 
                                                           echo '<td class="link"><a href="chapter-view.php?id='.$row['chapID'].'" >'.$row['chapID'].'   '.$row['Description'].' </a>';'</td>';
                                                           echo '</tr>';
                                           }
                                   }
                                   if($row['chapID'] == 2){ 
                                         if($row['Description'] != NULL){
-                                                          echo '<tr">'; 
+                                                          echo '<tr>'; 
                                                           echo '<td class="link"><a href="chapter-view.php?id='.$row['chapID'].'" >'.$row['chapID'].'   '.$row['Description'].' </a>';'</td>';
                                                           echo '</tr>';
                                           }
@@ -47,13 +48,15 @@
                        //'<tr>'; 
                        //   echo '<td><a href="chapter-view.php?id='.$row['chapID'].'" >'.$row['chapID'].'   '.$row['Description'].' </a>';'</td>'; 
                        //'</tr>'; 
-                  }
-              }
+                        }
+                }
 
-        ?>
-</table>
+                ?>
+                </table>
 
-</div>
+</div><!-- END TABLE -->
+
+
 
 </div>
 

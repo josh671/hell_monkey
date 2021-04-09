@@ -59,13 +59,44 @@ nav li :hover{
 }
 
 /* START OF COMICS PAGE */ 
-.comics #wrapper{ 
+.chapters #wrapper{ 
     width: 940px; 
     height: 700px; 
     position: relative; 
     margin: 0 auto; 
     background-color: greenyellow; 
     font-family: Arial, Helvetica, sans-serif;
+}
+
+#chapters_table { 
+    background: green; 
+    width: 100% ;
+    margin: 0 auto;
+}
+
+#chap_table { 
+    background: blue; 
+    padding: 10px; 
+    border: 1px solid black; 
+    width: 100%; 
+} 
+
+#chap_table tr{ 
+    width: 100%; 
+    background: red; 
+  
+} 
+
+.th_one { 
+    width: 70%; 
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+}
+
+table td{ 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    padding-left: 5px; 
 }
 
 
