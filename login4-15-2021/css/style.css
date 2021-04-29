@@ -99,16 +99,42 @@ table td{
     padding-left: 5px; 
 }
 
+.register #login-form-container{ 
+    margin: 0 auto; 
+    width: 940px; 
+} 
 
+.register label{ 
+    width: 80%; 
+    padding-left: 10px; 
+    font-size: 1.25em; 
+    letter-spacing: 1px;
+    padding: 5px;
+    margin-left: 10px;
+    display: block;
+}
 
+.register input{ 
+    width: 80%; 
+    background-color: red;
+    border-radius: 5px; 
+    height: 1.8em; 
+    margin-left: 10px; 
+}
 
+.register form{ 
+    width: 750px; 
+    background: green;  
+    margin: 0 auto; 
 
+}
 
 /* START OF UPLOADS CSS */ 
-.uploads #wrapper{ 
+ #uploadwrapper{ 
     width: 940px; 
     height: 500px; 
     background-color: green; 
     position: relative;
     margin:0 auto; 
+    color: #fff; 
 }

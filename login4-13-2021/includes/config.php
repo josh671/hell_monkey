@@ -3,7 +3,11 @@
 
 include('./includes/credentials.php'); 
 //setting what page we are on with THIS_PAGE
+//tried to add error messages
 define('THIS_PAGE', basename($_SERVER['PHP_SELF'])); 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL); 
 
 //using switch statement for condidtions of pages 
 switch(THIS_PAGE){ 
@@ -37,6 +41,13 @@ switch(THIS_PAGE){
         $center = ''; 
         $body = 'uploads'; 
     break; 
+    case 'register.php': 
+        $title = 'Register as a Free User'; 
+        $mainHeadline = 'Register Here!'; 
+        $center = ''; 
+        $body = 'register'; 
+    break;
+
 }//end of switch, total 4
  
 //nav array, total 4

@@ -3,7 +3,11 @@
 
 include('./includes/credentials.php'); 
 //setting what page we are on with THIS_PAGE
+//tried to add error messages
 define('THIS_PAGE', basename($_SERVER['PHP_SELF'])); 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL); 
 
 //using switch statement for condidtions of pages 
 switch(THIS_PAGE){ 
@@ -31,12 +35,20 @@ switch(THIS_PAGE){
         $center = 'chapters'; 
         $body = 'chapters'; 
     break; 
-    case 'uploads.php': 
+    case 'uploadform.php': 
         $title = 'File Upload Page'; 
         $mainHeadline = ''; 
         $center = ''; 
         $body = 'uploads'; 
     break; 
+    case 'registerform.php': 
+        $title = 'register'; 
+        $mainHeadline = ''; 
+        $center = ''; 
+        $body = 'register'; 
+    break; 
+   
+
 }//end of switch, total 4
  
 //nav array, total 4

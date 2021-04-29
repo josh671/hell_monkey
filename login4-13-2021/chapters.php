@@ -1,6 +1,6 @@
 <?php include('./includes/config.php'); ?> 
 <?php include('./includes/header.php'); ?> 
-
+<?php include('./includes/nav.php'); ?>
 
 <div id="wrapper">
 <h1>Here are a list of my Comics</h1> 
@@ -22,27 +22,19 @@
                                 echo '</tr>';
                       //start of while loop 
                       while ($row = mysqli_fetch_assoc($result) ){ 
-                                if($row['chapID'] == 0){ 
-                                      if($row['Description'] != NULL){
-                                                        echo '<tr>'; 
-                                                        echo '<td class="link"><a href="chapter-view.php?id='.$row['chapID'].'" >'.$row['chapID'].' '.$row['Description'].' </a>';'</td>';
-                                                        echo '</tr>';
-                                        }
-                                  }
-                                if($row['chapID'] == 1){ 
-                                        if($row['Description'] != NULL){
-                                                          echo '<tr>'; 
-                                                          echo '<td class="link"><a href="chapter-view.php?id='.$row['chapID'].'" >'.$row['chapID'].'   '.$row['Description'].' </a>';'</td>';
-                                                          echo '</tr>';
-                                          }
-                                  }
-                                  if($row['chapID'] == 2){ 
-                                        if($row['Description'] != NULL){
-                                                          echo '<tr>'; 
-                                                          echo '<td class="link"><a href="chapter-view.php?id='.$row['chapID'].'" >'.$row['chapID'].'   '.$row['Description'].' </a>';'</td>';
-                                                          echo '</tr>';
-                                          }
-                                  }
+                                for($x = 0; $x <= mysqli_num_rows($result); $x++){ 
+                                        if($row['chapID'] == $x){ 
+                                                if($row['Description'] != NULL){
+                                                                  echo '<tr>'; 
+                                                                  echo '<td class="link"><a href="chapter-view.php?id='.$row['chapID'].'" >'.$row['chapID'].' '.$row['Description'].' </a>';'</td>';
+                                                                  echo '</tr>';
+                                                  }
+                                            }
+
+                                }
+
+
+                                
                               
                         //now to show contents of result 
                        //'<tr>'; 
